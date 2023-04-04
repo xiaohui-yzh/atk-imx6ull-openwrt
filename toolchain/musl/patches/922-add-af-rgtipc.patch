@@ -1,0 +1,22 @@
+Index: toolchain-mipsel_24kc_gcc-7.3.0_musl/include/sys/socket.h
+===================================================================
+--- toolchain-mipsel_24kc_gcc-7.3.0_musl.orig/include/sys/socket.h	2022-01-16 13:15:23.000000000 +0800
++++ toolchain-mipsel_24kc_gcc-7.3.0_musl/include/sys/socket.h	2022-01-16 17:17:14.000000000 +0800
+@@ -110,7 +110,8 @@
+ #define PF_QIPCRTR      42
+ #define PF_SMC          43
+ #define PF_XDP          44
+-#define PF_MAX          45
++#define PF_RGTIPC       45
++#define PF_MAX          46
+ 
+ #define AF_UNSPEC       PF_UNSPEC
+ #define AF_LOCAL        PF_LOCAL
+@@ -160,6 +161,7 @@
+ #define AF_QIPCRTR      PF_QIPCRTR
+ #define AF_SMC          PF_SMC
+ #define AF_XDP          PF_XDP
++#define AF_RGTIPC       PF_RGTIPC
+ #define AF_MAX          PF_MAX
+ 
+ #ifndef SO_DEBUG

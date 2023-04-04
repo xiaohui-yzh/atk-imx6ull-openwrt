@@ -1,0 +1,12 @@
+Index: musl/include/pthread.h
+===================================================================
+--- musl.orig/include/pthread.h	2019-10-14 05:58:27.000000000 +0800
++++ musl/include/pthread.h	2020-11-02 18:40:07.321794707 +0800
+@@ -36,6 +36,7 @@
+ #define PTHREAD_MUTEX_NORMAL 0
+ #define PTHREAD_MUTEX_DEFAULT 0
+ #define PTHREAD_MUTEX_RECURSIVE 1
++#define PTHREAD_MUTEX_RECURSIVE_NP  PTHREAD_MUTEX_RECURSIVE
+ #define PTHREAD_MUTEX_ERRORCHECK 2
+ 
+ #define PTHREAD_MUTEX_STALLED 0

@@ -1,0 +1,20 @@
+diff -Naur a/src/misc/syslog.c b/src/misc/syslog.c
+--- a/src/misc/syslog.c	2019-10-14 05:58:27.000000000 +0800
++++ b/src/misc/syslog.c	2021-01-11 18:30:12.291677542 +0800
+@@ -96,12 +96,12 @@
+ 	if (!(priority & LOG_FACMASK)) priority |= log_facility;
+ 
+ 	now = time(NULL);
+-	gmtime_r(&now, &tm);
+-	strftime(timebuf, sizeof timebuf, "%b %e %T", &tm);
++	//gmtime_r(&now, &tm);
++	//strftime(timebuf, sizeof timebuf, "%b %e %T", &tm);
+ 
+ 	pid = (log_opt & LOG_PID) ? getpid() : 0;
+-	l = snprintf(buf, sizeof buf, "<%d>%s %n%s%s%.0d%s: ",
+-		priority, timebuf, &hlen, log_ident, "["+!pid, pid, "]"+!pid);
++	l = snprintf(buf, sizeof buf, "<%d>%.15s %n%s%s%.0d%s: ",
++		priority, ctime(&now) + 4, &hlen, log_ident, "["+!pid, pid, "]"+!pid);
+ 	errno = errno_save;
+ 	l2 = vsnprintf(buf+l, sizeof buf - l, message, ap);
+ 	if (l2 >= 0) {
