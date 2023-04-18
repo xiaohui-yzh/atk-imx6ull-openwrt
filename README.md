@@ -15,3 +15,5 @@ sudo apt-get install build-essential subversion git-core libncurses5-dev zlib1g-
 安装软件包：./scripts/feeds install -a
 
 编译：make V=s
+
+目前仅支持sd卡启动
