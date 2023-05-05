@@ -8,7 +8,7 @@
 openwrt版本：18.06，linux内核版本：同正点原子提供的4.1.15
 
 编译前准备：
-sudo apt-get install build-essential subversion git-core libncurses5-dev zlib1g-dev gawk flex quilt libssl-dev xsltproc libxml-parser-perl mercurial bzr ecj cvs unzip
+sudo apt-get install build-essential subversion git-core libncurses5-dev zlib1g-dev gawk flex quilt libssl-dev xsltproc libxml-parser-perl mercurial bzr ecj cvs unzip python3-distutils
 
 更新软件包：./scripts/feeds update -a
 
